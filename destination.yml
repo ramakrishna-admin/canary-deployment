@@ -11,11 +11,11 @@ spec:
     - destination:
         host: mydst
         subset: ss1
-      weight: 10
+      weight: 05
     - destination:
         host: mydst
         subset: ss2
-      weight: 90
+      weight: 95
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
