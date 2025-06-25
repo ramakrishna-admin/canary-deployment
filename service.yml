@@ -2,12 +2,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-name: my-svc
-
+  name: my-svc
 spec:
   selector:
     app: puzzle
-  type: Loadbalancer
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 80
