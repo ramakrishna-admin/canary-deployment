@@ -27,7 +27,7 @@ kind: Deployment
 metadata:
   name: canary
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: puzzle
