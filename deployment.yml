@@ -1,0 +1,45 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-dp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: puzzle
+      version: v1
+    template:
+      metadata:
+        labels:
+          app: puzzle
+          version: v1
+      spec:
+        containers:
+          - name: p-count
+            image: ramakrishna737/puzzle-p:v1
+            ports:
+              - containerPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: canery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: puzzle
+      version: v2
+    template:
+      metadata:
+        labels:
+          app: puzzle
+          version: v2
+      spec:
+        containers:
+          - name: p-count
+            image: ramakrishna737/zomato-p:v1
+            ports:
+              - containerPort: 80
