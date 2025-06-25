@@ -40,6 +40,6 @@ spec:
     spec:
       containers:
         - name: p-count
-          image: ramakrishna737/zomato-p:v1
+          image: ramakrishna737/pflicart:v1
           ports:
             - containerPort: 80
